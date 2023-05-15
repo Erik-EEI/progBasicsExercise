@@ -32,47 +32,47 @@ const nestedArray = [
 ];
 
 
-// 1.return the first, and the last element.
+// 1.return the first, and the last element of "numbers".
 const firstAndLast = ( array ) => {
 
 };
 
-// 2.return the length of the array.
+// 2.return the length of the "numbers" array.
 const lengthOfArray = ( array ) => {
 
 };
 
-// 3.add the number " 50 " as the last element to numbers array in two different ways (Method / indexing).
+// 3.add the number " 50 " as the last element to "numbers" array in two different ways (Method / indexing).
 const addNumberToEnd = ( array ) => {
 
 };
 
-// 4.add the number " 4 " as the first element to numbers array.
+// 4.add the number " 4 " as the first element to the "numbers" array.
 const addNumberToBeginning = ( array ) => {
 
 };
 
-// 5.return the highest number in the numbers array.
+// 5.return the highest number from the "numbers" array.
 const highestNum = ( array ) => {
 
 };
 
-// 6.return the smallest number in the numbers array.
+// 6.return the smallest number from the "numbers" array.
 const smallestNum = ( array ) => {
 
 };
 
-// 7.replace the fifth element in the arra to " 25 ".
+// 7.replace the fifth element of the "numbers" array to " 25 ".
 const replaceFifthElement = ( array ) => {
 
 };
 
-// 8.return the sum of the numbers from the array
+// 8.return the sum of the numbers from the "numbers" array
 const sumArray = ( array ) => {
 
 };
 
-// 9.return the sum of the even numbers from the array.
+// 9.return the sum of the even numbers from the "numbers" array.
 const sumEven = ( array ) => {
 
 };
@@ -87,22 +87,22 @@ const longestWord = ( array ) => {
 
 };
 
-// 12.return the numbers array sorted from smallest number to highest.
+// 12.return the "numbers" array sorted from smallest number to highest.
 const sortArray = ( array ) => {
 
 };
 
-// 13.return the strings array with all of its words in uppercase
+// 13.return the "strings" array with all of its words in uppercase
 const upperCaseify = ( array ) => {
 
 };
 
-// 14.return a new array from the strings array, which only includes the words with 5+ letters. (word longer than 5 characters)
+// 14.return a new array from the "strings" array, which only includes the words with 5+ letters. (word longer than 5 characters)
 const onlyTheLong = ( array ) => {
 
 };
 
-// 15.return the difference between the largest and the smallest number in the array.
+// 15.return the difference between the largest and the smallest number in the "numbers" array.
 const differenceOfNums = ( array ) => {
 
 };
@@ -205,4 +205,4 @@ const exercises = [
 // ↑↑ DO NOT MODIFY THE CODE ABOVE THIS LINE ↑↑ //
 
 // TYPE IN WHICH TASKS TO PREVIEW (FROM , TO)
-displayExercises(1, 26);
+displayExercises(20);
