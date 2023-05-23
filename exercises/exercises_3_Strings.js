@@ -20,11 +20,18 @@
 ▄█ ░█░ █▀▄ █ █░▀█ █▄█ ▄█
 */
 
+
+// ↓↓ SAMPLE DATA - DO NOT MODIFY ↓↓ //
+
 const str = 'The quick brown fox jumps over the lazy dog';
 const word = "bookkeeper";
 const word1 = "listen";
 const word2 = "silent";
 const strArr = ["racecar", "python", "level", "coding", "radar"];
+
+// ↑↑ SAMPLE DATA - DO NOT MODIFY ↑↑ //
+
+
 
 // 1. return a string "My name is [your name], and my favorite food is [food]"
 const nameAndFood = () => {

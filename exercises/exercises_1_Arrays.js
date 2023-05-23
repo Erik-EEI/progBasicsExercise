@@ -20,6 +20,7 @@
 █▀█ █▀▄ █▀▄ █▀█ ░█░ ▄█
 */
 
+// ↓↓ SAMPLE DATA - DO NOT MODIFY ↓↓ //
 
 const numbers = [ 1, 1, 2, 5, 7, 2, 10, 11, 12, 40];
 const numbers2 = [ 1, 2, 6, 10, 15];
@@ -30,6 +31,7 @@ const nestedArray = [
   [true, false, true],
   ['apple', 'banana', 'orange'],
 ];
+// ↑↑ SAMPLE DATA - DO NOT MODIFY ↑↑ //
 
 
 // 1.return the first, and the last element of "numbers".

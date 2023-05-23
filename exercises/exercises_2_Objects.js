@@ -20,6 +20,9 @@
 █▄█ █▄█ █▄█ ██▄ █▄▄ ░█░ ▄█
 */
 
+
+// ↓↓ SAMPLE DATA - DO NOT MODIFY ↓↓ //
+
 const person = {
   name: 'John Smith',
   age: 30,
@@ -172,6 +175,10 @@ const people = [
   { name: 'Emily', age: 20 },
   { name: 'Alex', age: 35 },
 ];
+
+// ↑↑ SAMPLE DATA - DO NOT MODIFY ↑↑ //
+
+
 
 // 1.return the person's name (from "person" object)
 const whatIsYourName = ( object ) => {
