@@ -33,6 +33,7 @@ const sumNumbers = (num1, num2) => {
 exercise.check(1, sumNumbers(1, 2));<br>
 // output : EXERCISE 1 ---> CORRECT
 ```
++ For a full example, see the first task in the ```exercises_1_Arrays.js`` file.
 
 3. Run the file 
 + In the terminal navigate to the ```exercises``` folder with ```cd exercises/``` command.
