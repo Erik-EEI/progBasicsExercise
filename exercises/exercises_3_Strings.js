@@ -1,3 +1,5 @@
+import {exercise} from '../answerCheck.js';
+exercise.setPage('strings');
 /*
 ██████╗░██████╗░░█████╗░░██████╗░██████╗░░█████╗░░██████╗██╗░█████╗░░██████╗
 ██╔══██╗██╔══██╗██╔══██╗██╔════╝░██╔══██╗██╔══██╗██╔════╝██║██╔══██╗██╔════╝
@@ -140,41 +142,3 @@ const everyWordHasA = ( array ) => {
 
 }
 
-
-// ↓↓ DO NOT MODIFY THE CODE BELOW THIS LINE ↓↓ //
-function displayExercises ( from, to = from ) {
-  if (from > to){
-    return console.error('ERROR : From value is bigger than to value.');
-  }
-  for (let i = from - 1; i < to; i++){
-    console.log(`\nTASK ${i + 1}`);
-    console.log(exercises[i]);
-  }
-}
-const exercises = [
-nameAndFood(),
-whereIsFox( str ),
-replaceDog( str ),
-upperCaseString( str ),
-repeatedWords( str ),
-reverseWord( word ),
-palindromesOfArr( strArr ),
-isAnagram( word1, word2 ),
-longestWord( str ),
-capitalizeFirstLetter( str ),
-countWords( str ),
-mostOccuringChar( word ),
-firstNonRepeatChar( word ),
-oCount( word ),
-sortByLength( strArr ),
-joinStrings( word1, word2),
-replaceWordWithLength( strArr ),
-sortByAlphabet( strArr ),
-doesItHaveX( strArr ),
-everyWordHasA( strArr )
-
-];
-// ↑↑ DO NOT MODIFY THE CODE ABOVE THIS LINE ↑↑ //
-
-// TYPE IN WHICH TASKS TO PREVIEW (FROM , TO)
-displayExercises(1, 21);

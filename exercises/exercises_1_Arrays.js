@@ -1,3 +1,6 @@
+import {exercise} from '../answerCheck.js';
+exercise.setPage('arrays');
+
 /*
 ██████╗░██████╗░░█████╗░░██████╗░██████╗░░█████╗░░██████╗██╗░█████╗░░██████╗
 ██╔══██╗██╔══██╗██╔══██╗██╔════╝░██╔══██╗██╔══██╗██╔════╝██║██╔══██╗██╔════╝
@@ -34,7 +37,7 @@ const nestedArray = [
 // ↑↑ SAMPLE DATA - DO NOT MODIFY ↑↑ //
 
 
-// 1.return the first, and the last element of "numbers".
+// 1.return the first, and the last element of "numbers" in an array.
 const firstAndLast = ( array ) => {
 
 };
@@ -139,7 +142,7 @@ const giveMeApple = ( array ) => {
 
 };
 
-// 22. console log every element from the second array in "nestedArray"
+// 22. console log every element from the second array in "nestedArray", and return them in a new array
 const consoleLogEverything = ( array ) => {
 
 };
@@ -163,48 +166,3 @@ const onlyLastElement = ( array ) => {
 const everyPlaceCombination  = ( array ) => {
 
 };
-
-
-// ↓↓ DO NOT MODIFY THE CODE BELOW THIS LINE ↓↓ //
-function displayExercises ( from, to = from ) {
-  if (from > to){
-    return console.error('ERROR : From value is bigger than to value.');
-  }
-  for (let i = from - 1; i < to; i++){
-    console.log(`\nTASK ${i + 1}`);
-    console.log(exercises[i]);
-  }
-}
-const exercises = [
-  firstAndLast( numbers ),
-  lengthOfArray( numbers ),
-  addNumberToEnd( numbers ),
-  addNumberToBeginning( numbers ),
-  highestNum( numbers ),
-  smallestNum( numbers ),
-  replaceFifthElement( numbers ),
-  sumArray( numbers ),
-  sumEven( numbers ),
-  presentInBoth( numbers, numbers2),
-  longestWord( strings ),
-  sortArray( numbers ),
-  upperCaseify( strings ),
-  onlyTheLong( strings ),
-  differenceOfNums( numbers ),
-  removeDuplications( numbers ),
-  reverseArray( numbers ),
-  doubleNumbers( numbers ),
-  averageOfNums( numbers ),
-  countTheOdd( numbers ),
-  giveMeApple( nestedArray ),
-  consoleLogEverything( nestedArray ),
-  typeOfFirstElement( nestedArray ),
-  largestNumOfSubArray( nestedArray ),
-  onlyLastElement( nestedArray ),
-  everyPlaceCombination( nestedArray ),
-];
-
-// ↑↑ DO NOT MODIFY THE CODE ABOVE THIS LINE ↑↑ //
-
-// TYPE IN WHICH TASKS TO PREVIEW (FROM , TO)
-displayExercises(20);

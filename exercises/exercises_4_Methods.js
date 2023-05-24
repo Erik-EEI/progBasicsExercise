@@ -1,3 +1,6 @@
+import {exercise} from '../answerCheck.js';
+exercise.setPage('methods');
+
 /*
 ██████╗░██████╗░░█████╗░░██████╗░██████╗░░█████╗░░██████╗██╗░█████╗░░██████╗
 ██╔══██╗██╔══██╗██╔══██╗██╔════╝░██╔══██╗██╔══██╗██╔════╝██║██╔══██╗██╔════╝
@@ -80,30 +83,3 @@ const addLength = ( array ) => {
 }
 
 
-
-// ↓↓ DO NOT MODIFY THE CODE BELOW THIS LINE ↓↓ //
-function displayExercises ( from, to = from ) {
-    if (from > to){
-      return console.error('ERROR : From value is bigger than to value.');
-    }
-    for (let i = from - 1; i < to; i++){
-      console.log(`\nTASK ${i + 1}`);
-      console.log(exercises[i]);
-    }
-  }
-  const exercises = [
-    spliceArray( numbers ),
-    sliceArray( numbers ),
-    numsDoubled( numbers ),
-    removeOdd( numbers ),
-    isKiwiIncluded( fruits ),
-    sumAllNumbers( numbers ),
-    joinArray( numbers, fruits ),
-    includesBigger( numbers ),
-    everyNumEven( numbers ),
-    addLength( fruits )
-  ];
-  // ↑↑ DO NOT MODIFY THE CODE ABOVE THIS LINE ↑↑ //
-  
-  // TYPE IN WHICH TASKS TO PREVIEW (FROM , TO)
-  displayExercises(1, 10);
