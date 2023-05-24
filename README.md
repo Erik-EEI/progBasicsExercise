@@ -34,4 +34,9 @@ exercise.check(1, sumNumbers(1, 2));<br>
 // output : EXERCISE 1 ---> CORRECT
 ```
 
+3. Run the file 
++ In the terminal navigate to the ```exercises``` folder with ```cd exercises/``` command.
++ Run the file you are currently working on with ```node yourfile``` command.
+> If you did everything right the console should print : ```TASK [id] ---> CORRECT```
+
 **PLEASE NOTE THAT THE ANSWER CHECKING METHOD IS UNDER DEVELOPMENT!! IT MAY GIVE YOU FALSE RESULTS !!**
