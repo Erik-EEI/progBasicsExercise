@@ -34,15 +34,15 @@ USE OF CUSTOM BUILT METHODS FOR ANSWER CHECKING
 
 2. after you have finished an exercise, you can check if your souliton is correct with the **exercise.check()** method.
 
-simply write **exercise.check([task id], [your solution]);** after the exercise.
-for example:
+simply write **exercise.check([task id], [your solution]);** after the exercise.<br>
+for example:<br>
 
-// 1. sum the two numbers: 1, 2
-const sumNumbers = ( num1, num2 ) =>{
-    return num1 + num2;
+// 1. sum the two numbers: 1, 2<br>
+const sumNumbers = ( num1, num2 ) =>{<br>
+    return num1 + num2;<br>
 }
 
-exercise.check( 1, sumNumbers( 1, 2 ));
-<em>// output : EXERCISE 1 ---> CORRECT</em>
+exercise.check( 1, sumNumbers( 1, 2 ));<br>
+<em>// output : EXERCISE 1 ---> CORRECT</em><br>
 
  <span style='color: red;'>**PLEASE NOTE THAT THE ANSWER CHECKING METHOD IS UNDER DEVELOPMENT!! IT MAY GIVE YOU FALSE RESULTS !!**</span>
