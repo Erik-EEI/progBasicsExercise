@@ -1,12 +1,9 @@
 # Warm Up
 
-Print the number of products.
-
-Print the name of the last product.
-
-Write a function called `getSongCountInFirst` which returns the number of songs (details) of the first album. Call this function and print its return value.
-
-Write a function called `getAvailableAmount` which returns the number of albums (products) that are available (use `status`). Call this function and print its return value.
++ Print the number of products.
++ Print the name of the last product.
++ Write a function called `getSongCountInFirst` which returns the number of songs (details) of the first album. Call this function and print its return value.
++ Write a function called `getAvailableAmount` which returns the number of albums (products) that are available (use `status`). Call this function and print its return value.
 
 -----------------------------------------------
 # PA 1

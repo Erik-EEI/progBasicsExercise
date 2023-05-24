@@ -1,19 +1,11 @@
 # Programming Basics Exercises
 
-
-
-
-
-
 ██████╗░██████╗░░█████╗░░██████╗░██████╗░░█████╗░░██████╗██╗░█████╗░░████
 ██╔══██╗██╔══██╗██╔══██╗██╔════╝░██╔══██╗██╔══██╗██╔════╝██║██╔══██╗██╔══
 ██████╔╝██████╔╝██║░░██║██║░░██╗░██████╦╝███████║╚█████╗░██║██║░░╚═╝╚████
 ██╔═══╝░██╔══██╗██║░░██║██║░░╚██╗██╔══██╗██╔══██║░╚═══██╗██║██║░░██╗░╚═══
 ██║░░░░░██║░░██║╚█████╔╝╚██████╔╝██████╦╝██║░░██║██████╔╝██║╚█████╔╝█████
 ╚═╝░░░░░╚═╝░░╚═╝░╚════╝░░╚═════╝░╚═════╝░╚═╝░░╚═╝╚═════╝░╚═╝░╚════╝░╚════
-
-
-
 
 ███████╗██╗░░██╗███████╗██████╗░░█████╗░██╗░██████╗███████╗░██████╗
 ██╔════╝╚██╗██╔╝██╔════╝██╔══██╗██╔══██╗██║██╔════╝██╔════╝██╔════╝
@@ -24,25 +16,22 @@
 
 By : Erik-EEI
 
-
-
-
-USE OF CUSTOM BUILT METHODS FOR ANSWER CHECKING
+How to use custom built-in methods for checking your answers
 -----------------------------------------------
 
-1. Locate the exercises - enter ./exercises/exercise_*_******.js file and start an exercise.
+1. Locate the exercises - enter ```./exercises/exercises_*_******.js``` file and start an exercise.
 
-2. after you have finished an exercise, you can check if your souliton is correct with the **exercise.check()** method.
-
-simply write **exercise.check([task id], [your solution]);** after the exercise.<br>
-for example:<br>
-
+2. After you have finished an exercise, you can check if your solution is correct with the ```exercise.check()``` method.
++ Simply write ```exercise.check([task id], [your solution]);``` after the exercise.
++ For example:
+```javascript
 // 1. sum the two numbers: 1, 2<br>
-const sumNumbers = ( num1, num2 ) =>{<br>
-    return num1 + num2;<br>
+const sumNumbers = (num1, num2) => {
+  return num1 + num2;
 }
 
-exercise.check( 1, sumNumbers( 1, 2 ));<br>
-<em>// output : EXERCISE 1 ---> CORRECT</em><br>
+exercise.check(1, sumNumbers(1, 2));<br>
+// output : EXERCISE 1 ---> CORRECT
+```
 
- <span style='color: red;'>**PLEASE NOTE THAT THE ANSWER CHECKING METHOD IS UNDER DEVELOPMENT!! IT MAY GIVE YOU FALSE RESULTS !!**</span>
+**PLEASE NOTE THAT THE ANSWER CHECKING METHOD IS UNDER DEVELOPMENT!! IT MAY GIVE YOU FALSE RESULTS !!**
