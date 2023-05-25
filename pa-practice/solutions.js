@@ -150,7 +150,6 @@ const getMostComplexSong = ( productsArray ) => {
 
 
 
-
 const main = ( dataBase ) => {
   console.log('\nWARM UP');
   console.log('----------------8<-------------');
@@ -206,6 +205,6 @@ const main = ( dataBase ) => {
   console.log('\n[EXTRA] - TASK 1');
   console.log(getMostComplexSong(dataBase));
 
-  console.log(totalBytes(dataBase));
+  console.log(groupByGenre(dataBase));
 };
 main( products );

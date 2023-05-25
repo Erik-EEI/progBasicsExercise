@@ -178,3 +178,95 @@ const filterTaxables = ( products ) => products.filter((album) => {
   return album.taxable;
 });
 ```
+
+12. How would you find the total number of unique vendors in the products list? 
+> + I would create an empty object, to store the vendor ID's as keys inside of it.
+> + Next, i would use the ```Array.forEach()``` method on the ```products``` array, to iterate through every album.
+> + Inside the method's callback function, i would check if the currently inspected album's vendor ID is already a key in the object i've created.
+>> + If it is already a key with the current ID, this function would not do anything.
+>> + If there is no key with the current vendor's ID, this function would create one, with a value of : ```1```.
+> + After the iteration of the array is done, i would return the ```length``` of the object's keys ( with ```Object.keys(object)```) which holds the vendors.<br>
+For example:
+```javascript
+const totalUniqueVendors = ( products ) => {
+  const vendors = {};
+
+  products.forEach( (album) => {
+    if (!vendors[album.vendor_id]){
+      vendors[album.vendor_id] = 1;
+    }
+  });
+  return Object.keys(vendors).length;
+};
+```
+
+13. How would you display the name of the product, its price, and its vendor for each product in the list? 
+> + First, i would start with the initialization of an iteration on the `products` array with the `Array.forEach()` method.
+> + For better readibility, in the method's callback function i would create three variables.
+>> + One for storing the `name` of the product.
+>> + One for storing the `price` of the product.
+>> + One for storing the `vendor` of the product.
+> + After the variables i would `console.log()` the three variables.<br>
+For example:
+```javascript
+const infoOnAlbums = ( products ) => {
+  products.forEach( (album) => {
+    const name = `Name : ${album.name}\n`;
+    const price = `Price : ${album.price}\n`;
+    const vendor = `Vendor : ${album.vendor.name}\n`;
+
+    console.log(name, price, vendor);
+  });
+};
+```
+
+14. How would you find the total number of tracks with a unit price of 0.99 in the products list? 
+> + I would create a variable, that holds the count of the tracks that fits the criteria.
+> + Next, i would start iterating through the `products` array with an `Array.forEach()` method.
+> + In the method's callback function, i would start a second iteration on the `details` key's value, also with an `Array.forEach()` method.
+> + In the second method that iterates through the tracks, i would check the value of track's `unit_price` key. If it matches the criteria ( 0.99 ), we add `1` to the variable that counts the tracks.<br>
+For example:
+```javascript
+const totalNumberOfCheapTracks = ( products ) => {
+  let trackCount = 0;
+
+  products.forEach( (album) => {
+    album.details.forEach( (track) => {
+      if (track.unit_price === 0.99){
+        trackCount++;
+      }
+    });
+  });
+  return trackCount;
+};
+```
+
+15. How would you group the products by genre and display the name of the genre and the number of products associated with them? 
+> + I would create an empty object first. That would hold the frequency list of the genres.
+> + Next, i would start iterating through the `products` array with the `Array.forEach()` method.
+> + Inside of the method's callback function i would start a new iteration, with the same method, on the value of the current album's `details` key.
+> + Inside the callback function of the previous method, with an `if` statement, i would check if the current track's genre is already a key in the object.
+>> + If **it is** already a key : check if that key's value already includes the current album.
+>> + If it is **not** a key : create this new key, with the value of the current album's name.
+> + After the iteration is done, i would use a `for...in` loop, to go through every key in the object that holds the genres, and map every key's value to its own length.
+> + And finally, i would display the result with the `console.table()` method.<br>
+For example:
+```javascript
+const groupByGenre = ( products ) => {
+  const genres = {};
+
+  products.forEach( (album) => {
+    album.details.forEach((track) => {
+      if (!genres[track.genre_id]){
+        genres[track.genre_id] = [album.name];
+      } else if (!Object.values(genres[track.genre_id]).includes(album.name)){
+        genres[track.genre_id].push(album.name);
+      }
+    });
+  });
+  for (const genre in genres){
+    genres[genre] =  genres[genre].length;
+  }
+  console.table(genres);
+};
+```
