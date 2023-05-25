@@ -25,7 +25,7 @@ How to use custom built-in methods for checking your answers
 + Simply write ```exercise.check([task id], [your solution]);``` after the exercise.
 + For example:
 ```javascript
-// 1. sum the two numbers: 1, 2<br>
+// 1. sum the two numbers: 1, 2
 const sumNumbers = (num1, num2) => {
   return num1 + num2;
 }
@@ -41,3 +41,13 @@ exercise.check(1, sumNumbers(1, 2));<br>
 > If you did everything right the console should print : ```TASK [id] ---> CORRECT```
 
 **PLEASE NOTE THAT THE ANSWER CHECKING METHOD IS UNDER DEVELOPMENT!! IT MAY GIVE YOU FALSE RESULTS !!**
+<br>
+<br>
+<br>
+<br>
+
+
+How to read correctly the solutions-extra-2 file in the pa-practice folder
+-----------------------------------------------
+1. Locate the file - enter ```./pa-practice/``` folder.
+2. Right click the ```solutions-extra-2.md``` file and click : ``Open preview``.
