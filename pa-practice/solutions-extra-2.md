@@ -257,6 +257,7 @@ const groupByGenre = ( products ) => {
 
   products.forEach( (album) => {
     album.details.forEach((track) => {
+
       if (!genres[track.genre_id]){
         genres[track.genre_id] = [album.name];
       } else if (!Object.values(genres[track.genre_id]).includes(album.name)){
@@ -264,6 +265,7 @@ const groupByGenre = ( products ) => {
       }
     });
   });
+
   for (const genre in genres){
     genres[genre] = genres[genre].length;
   }
@@ -275,7 +277,7 @@ const groupByGenre = ( products ) => {
 > + I would create a variable first, that would keep count of the number of tracks we found, that meets the criteria. 
 > + After tha i would create a `RegExp`, that could match the name `Angus Young`,
 and store it in a variable.
-> + Next, i would use the `Array.forEach()` method to iterate through the albums-
+> + Next, i would use the `Array.forEach()` method to iterate through the albums.
 > + Inside the method's callback function, i would initiate an iteration on the value of the current album's `details` key.
 > + Since a track's `composer` key's value is a string,in an `if` statement, i would use the `String.prototype.match()` method on it, with the `RegExp` i've created before.
 > + I would also make sure, that the `composer` itself is not `null`, so i would handle that inside the previously mentioned `if` statement.
@@ -294,3 +296,92 @@ const numberOfTracksByAngus = ( products ) => {
   });
   return trackCount;
 };
+```
+
+17. How would you filter the products list to only show products that have a vendor with the name "AC/DC"? 
+> + I would use the `Array.filter()` method on the `products` array.
+> + Inside the method's callback function, i would check the value of each album's `vendor.name` key.
+> + After the method filtered the array, i would return the new, filtered list.<br>
+For example:
+```javascript
+const albumsByACDC = ( products ) => products.filter( (album) => album.vendor.name === 'AC/DC' );
+```
+
+18. How would you find the average number of bytes for all the tracks in the products list? 
+> +  For this, i would need to get the sum of all of the bytes, and the number of tracks.
+>> + I would create a variable, that keeps count of the bytes during the summarization proces.
+>> + Then, i would create a variable that counts the number of tracks.
+> + I would initiate an `Array.forEach()` method to iterate through the albums.
+> + Inside the method's callback function, i would start an iteration with the  `Array.forEach()` method on the value of every album's `details` key.
+> + In that callback function, i would add the value of the `bytes` key to the variable that counts that data,
+> + And i would increment the track number counter variable by `1`.
+> + After the iteration is done, i would divide the variable that holds the bytes with the variable that holds the number of tracks, and return the resulted value.<br>
+For example:
+```javascript
+const averageBytes = ( products ) => {
+  let byteCounter = 0;
+  let trackCounter = 0;
+
+  products.forEach( (album) => {
+    album.details.forEach( (track) =>{
+      byteCounter += track.bytes;
+      trackCounter++;
+    });
+  });
+  return byteCounter / trackCounter;
+};
+```
+19. How would you group the products by media type and display the name of the media type and the number of products associated with them? 
+> + First, i would create an empty object, that will hold the elements of the frequency list of `products` array.
+> + Then, i would start an iteration on the `products` array, with the `Array.forEach()` method.
+> + In the method's callback function, i would start an other iteration on the value of the current album's `details` key.
+> + In that method's callback function, with an `if` statement, i would check, if the value of the current track's `media_type_id` key is already a key in the frequency list object.
+>> + If it is **not** a key, than i would add it as a key, with the value of the album's name that the track is in.
+>> + If **it is** a key, than i would use the `Array.includes()` method to check if the album name is already present, among the values of this key. If not, i would add it with the `Array.push()` method.
+> + After the iteration is done, i would use a `for...in` loop to iterate through the object which holds the frequency list, and replace every value with its length.
+> + After the iteration is done, i would return the modified object.
+ <br>*It is easier to read the result if instead of the `console.log()` method, we use the `console.table()` method.*<br>
+ For example:
+
+ ```javascript
+const groupByMediaType = ( products ) => {
+  const mediaFrequency = {};
+  products.forEach( (album) => {
+    album.details.forEach( (track) => {
+      if (!mediaFrequency[track.media_type_id]){
+        mediaFrequency[track.media_type_id] = [album.name];
+      } else if (!Object.values(mediaFrequency[track.media_type_id]).includes(album.name)){
+        mediaFrequency[track.media_type_id].push(album.name);
+      }
+    });
+  });
+  for (const media in mediaFrequency){
+    mediaFrequency[media] = mediaFrequency[media].length;
+  }
+  return mediaFrequency;
+};
+ ```
+
+ 20. How would you find the total number of tracks in the products list that were composed by Brian Johnson?
+ > + I would create a variable that keeps the count of tracks that match the criteria.
+ > + Then, i would create a `RegExp` with the name of `Brian Johnson`.
+ > + Next, i would start an iteration with the `Array.forEach()` method on the `products` array.
+ > + In the method's callback function i would initiate an other iteration on the value of the current album's `details` key, also with the `Array.forEach()` method.
+ > + In that method's callback function, using an `if` statement combined with the `String.prototype.match()` method, i would check if the composers of the track include Brian Johnson.
+ > + If the string is present in the value of the `composer` key, than i would increment the variable that keeps count of tracks by `1`.
+ > + After the iterations are done, i would return the variable.<br>
+ For example:
+ ```javascript
+const tracksByJohnson = ( products ) => {
+  let trackCount = 0;
+  const regex = new RegExp('Brian Johnson', 'gi');
+  products.forEach( (album) => {
+    album.details.forEach( (track) => {
+      if (track.composer && track.composer.match(regex)){
+        trackCount++;
+      }
+    });
+  });
+  return trackCount;
+};
+```
