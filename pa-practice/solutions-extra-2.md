@@ -265,8 +265,32 @@ const groupByGenre = ( products ) => {
     });
   });
   for (const genre in genres){
-    genres[genre] =  genres[genre].length;
+    genres[genre] = genres[genre].length;
   }
   console.table(genres);
 };
 ```
+
+16. How would you find the total number of tracks in the products list that were composed by Angus Young?
+> + I would create a variable first, that would keep count of the number of tracks we found, that meets the criteria. 
+> + After tha i would create a `RegExp`, that could match the name `Angus Young`,
+and store it in a variable.
+> + Next, i would use the `Array.forEach()` method to iterate through the albums-
+> + Inside the method's callback function, i would initiate an iteration on the value of the current album's `details` key.
+> + Since a track's `composer` key's value is a string,in an `if` statement, i would use the `String.prototype.match()` method on it, with the `RegExp` i've created before.
+> + I would also make sure, that the `composer` itself is not `null`, so i would handle that inside the previously mentioned `if` statement.
+> + If the `.match()` method returns true, i would increment the value of the variable that counts the track.<br>
+```javascript
+const numberOfTracksByAngus = ( products ) => {
+  let trackCount = 0;
+  const regex = new RegExp ('Angus Young', 'gi');
+
+  products.forEach( (album) => {
+    album.details.forEach( (track) => {
+      if (track.composer && track.composer.match(regex)){
+        trackCount++;
+      }
+    });
+  });
+  return trackCount;
+};
